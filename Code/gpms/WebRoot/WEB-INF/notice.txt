@@ -1,0 +1,56 @@
+1.传给deanCheckQuestion的数据:subjects
+
+2(1)deanCheckQuestion点击通过的按钮  要传过来subjectId,处理好之后返回到deanCheckQuesion界面    
+subjectYes=1
+
+onclick="window.location.href='${pageContext.request.contextPath }/????'"
+(2)如果点击不通过的按钮，要传过来subjectId和subjectSuggest   subjectYes=2
+0是没有审核,1是通过，2是不通过
+
+
+3学生一二轮选题    form表单会传过来3个参数      subjectOne     subjectTwo    subjectThree     三个参数的名字
+			     form表单加一个参数    <hidden>    subjectTurn    表示这是第几轮选题
+			     
+4   deanConfirmSubject确认学生的选题,在from表单要加一个hidden    name=volunteerTurn
+
+
+5   确定学生第一二轮选题的做完了
+
+6   开放系统状态
+	1.老师上传题目2.学生第一轮选题
+	3.学生第二轮选题4.学生上传文档
+	
+	页面接受 systemStatuses
+	
+	deanStatus界面,checkBox要加上name属性,值为status1,2,3,4
+	还要加上onclick方法onclick="javascript:if(this.checked){this.value='1';}else{this.value='0';}"
+	
+	
+	!!!把deanStatus换成deanChangeStatus   最外面要套form
+	!!!把改变系统状态的放到admin中
+	
+7	studentViewSubject
+	在jsp中得到subjects
+	
+8	studentChangePwd
+	!!!在该页面中加入js，验证两遍新密码是否一样
+	因为有js验证，所以form中又要传旧密码和新密码过来就可以了oldPwd,newPwd
+
+9	studentViewScore
+	在jsp中得到subject
+	
+10	teacherChangePwd
+	!!!在该页面中加入js，验证两遍新密码是否一样
+	因为有js验证，所以form中又要传旧密码和新密码过来就可以了oldPwd,newPwd
+	
+11  互评的时候怎么确认老师和学生的对应关系
+	
+12  在AdminUploadAction中把五个mapping改成对的
+
+13  在AdminUploadAction中有改过5个相对于的serviceInter,里面的hasXXX方法，如果返回1就是有，那就是不会加入到list中,如果是0加入到list中
+
+14  在登陆界面使用jstl标签，得到${error} 如果有值，则在显示密码错误，然后把error  remove掉，如果没有则没有操作
+
+
+------周日
+1.  把systemStatus表insert，id只能为1到4,状态随意

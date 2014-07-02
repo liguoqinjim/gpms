@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="3060,15" dimension="181,91" />
+  <StrutsActivity path="/uploadQuestion.do" location="840,15" dimension="166,61" />
+  <StrutsActivity path="/teacherUrl.do" location="435,705" dimension="238,88" />
+  <StrutsActivity path="/adminUrl.do" location="1050,1080" dimension="242,104" />
+  <StrutsActivity path="/studentUrl.do" location="1680,720" dimension="249,104" />
+  <StrutsActivity path="/deanUrl.do" location="2325,660" dimension="235,104" />
+  <StrutsActivity path="/accessQuestion.do" location="2700,90" dimension="121,61" />
+  <StrutsActivity path="/notAccessQuestion.do" location="2820,90" dimension="121,61" />
+  <StrutsActivity path="/chooseSubject.do" location="2055,165" dimension="121,61" />
+  <StrutsActivity path="/confirmSubject.do" location="2700,165" dimension="121,61" />
+  <StrutsActivity path="/changePwd.do" location="2055,15" dimension="121,61" />
+  <StrutsActivity path="/teacherChangePwd.do" location="840,90" dimension="166,61" />
+  <StrutsActivity path="/adminUpload.do" location="1050,1200" dimension="241,91" />
+  <StrutsActivity path="/uploadClazz.do" location="1425,540" dimension="106,61" />
+  <StrutsActivity path="/uploadDept.do" location="1425,615" dimension="106,61" />
+  <StrutsActivity path="/uploadTeacher.do" location="1425,690" dimension="106,61" />
+  <StrutsActivity path="/uploadStudent.do" location="1425,765" dimension="106,61" />
+  <StrutsActivity path="/uploadMajor.do" location="1425,840" dimension="106,61" />
+  <StrutsActivity path="/queryStudent.do" location="1425,240" dimension="106,61" />
+  <StrutsActivity path="/accessGroup.do" location="2700,15" dimension="121,61" />
+  <StrutsActivity path="/changeStatus.do" location="1425,915" dimension="106,61" />
+  <StrutsActivity path="/inputFirstAssess.do" location="840,165" dimension="166,61" />
+  <StrutsActivity path="studentMain;6" location="210,15" dimension="151,61" />
+  <StrutsActivity path="teacherMain;6" location="210,90" dimension="151,61" />
+  <StrutsActivity path="deanMain;6" location="210,165" dimension="151,61" />
+  <StrutsActivity path="adminMain;6" location="210,240" dimension="151,61" />
+  <StrutsActivity path="login;6" location="210,315" dimension="151,61" />
+  <StrutsActivity path="teacherUploadQuestion;6" location="630,15" dimension="166,61" />
+  <StrutsActivity path="teacherChangePwd;6" location="630,90" dimension="166,61" />
+  <StrutsActivity path="teacherInputFirstAssess;6" location="630,165" dimension="166,61" />
+  <StrutsActivity path="teacherInputMutualAssess;6" location="630,240" dimension="166,61" />
+  <StrutsActivity path="teacherInputReplyAssess;6" location="630,315" dimension="166,61" />
+  <StrutsActivity path="teacherOk;6" location="630,390" dimension="166,61" />
+  <StrutsActivity path="adminUploadMajor;6" location="1245,840" dimension="151,61" />
+  <StrutsActivity path="adminBulkChanges;6" location="1245,90" dimension="151,61" />
+  <StrutsActivity path="adminOk;6" location="1245,165" dimension="151,61" />
+  <StrutsActivity path="adminQueryStudent;6" location="1245,240" dimension="151,61" />
+  <StrutsActivity path="adminQueryTeacher;6" location="1245,315" dimension="151,61" />
+  <StrutsActivity path="adminResetPwd;6" location="1245,390" dimension="151,61" />
+  <StrutsActivity path="adminStatistics;6" location="1245,465" dimension="151,61" />
+  <StrutsActivity path="adminUploadClazz;6" location="1245,540" dimension="151,61" />
+  <StrutsActivity path="adminUploadDept;6" location="1245,615" dimension="151,61" />
+  <StrutsActivity path="adminUploadTeacher;6" location="1245,690" dimension="151,61" />
+  <StrutsActivity path="adminUploadStudent;6" location="1245,765" dimension="151,61" />
+  <StrutsActivity path="studentChangePwd;6" location="1875,15" dimension="151,61" />
+  <StrutsActivity path="studentOk;6" location="1875,90" dimension="151,61" />
+  <StrutsActivity path="studentSelectOne;6" location="1875,165" dimension="151,61" />
+  <StrutsActivity path="studentSelectTwo;6" location="1875,240" dimension="151,61" />
+  <StrutsActivity path="studentUploadFile;6" location="1875,315" dimension="151,61" />
+  <StrutsActivity path="studentViewQuestion;6" location="1875,390" dimension="151,61" />
+  <StrutsActivity path="studentViewScore;6" location="1875,465" dimension="151,61" />
+  <StrutsActivity path="deanAssessGroup;6" location="2520,15" dimension="151,61" />
+  <StrutsActivity path="deanCheckQuestion;6" location="2520,90" dimension="151,61" />
+  <StrutsActivity path="deanConfirmVolunteer;6" location="2520,165" dimension="151,61" />
+  <StrutsActivity path="deanOk;6" location="2520,240" dimension="151,61" />
+  <StrutsActivity path="deanReplyGroup;6" location="2520,315" dimension="151,61" />
+  <StrutsActivity path="teacherError;6" location="630,465" dimension="166,61" />
+  <StrutsActivity path="adminError;6" location="1245,15" dimension="151,61" />
+  <StrutsActivity path="studentError;6" location="1875,540" dimension="151,61" />
+  <StrutsActivity path="deanError;6" location="2520,390" dimension="151,61" />
+  <StrutsActivity path="teacherDownloadFile;6" location="630,540" dimension="166,61" />
+  <StrutsActivity path="deanConfirmVolunteerThree;6" location="2520,465" dimension="151,61" />
+  <StrutsActivity path="adminChangeStatus;6" location="1245,915" dimension="151,61" />
+  <StrutsActivity path="adminCalendar;6" location="1245,990" dimension="151,61" />
+  <StrutsActivity path="deanCalendar;6" location="2520,540" dimension="151,61" />
+  <StrutsActivity path="studentCalendar;6" location="1875,615" dimension="151,61" />
+  <StrutsActivity path="teacherCalendar;6" location="630,615" dimension="166,61" />
+  <StrutsActivity path="studentViewTeacher;6" location="50,1150" dimension="289,81" />
+  <StrutsActivity path="/WEB-INF/student/studentMain.jsp" location="15,15" dimension="136,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherMain.jsp" location="15,90" dimension="136,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanMain.jsp" location="15,165" dimension="136,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminMain.jsp" location="15,240" dimension="136,61" />
+  <StrutsActivity path="/WEB-INF/login.jsp" location="15,315" dimension="136,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherUploadQuestion.jsp" location="435,15" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherChangePwd.jsp" location="435,90" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherInputFirstAssess.jsp" location="435,165" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherInputMutualAssess.jsp" location="435,240" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherInputReplyAssess.jsp" location="435,315" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherOk.jsp" location="435,390" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminUploadMajor.jsp" location="1050,840" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminBulkChanges.jsp" location="1050,90" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminOk.jsp" location="1050,165" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminQueryStudent.jsp" location="1050,240" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminQueryTeacher.jsp" location="1050,315" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminResetPwd.jsp" location="1050,390" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminStatistics.jsp" location="1050,465" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminUploadClazz.jsp" location="1050,540" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminUploadDept.jsp" location="1050,615" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminUploadTeacher.jsp" location="1050,690" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminUploadStudent.jsp" location="1050,765" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentChangePwd.jsp" location="1680,15" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentOk.jsp" location="1680,90" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentSelectOne.jsp" location="1680,165" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentSelectTwo.jsp" location="1680,240" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentUploadFile.jsp" location="1680,315" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentViewQuestion.jsp" location="1680,390" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentViewScore.jsp" location="1680,465" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanAssessGroup.jsp" location="2325,15" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanCheckQuestion.jsp" location="2325,90" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanConfirmVolunteer.jsp" location="2325,165" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanOk.jsp" location="2325,240" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanReplyGroup.jsp" location="2325,315" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherError.jsp" location="435,465" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminError.jsp" location="1050,15" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/student/studentError.jsp" location="1680,540" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanError.jsp" location="2325,390" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherDownloadFile.jsp" location="435,540" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanConfirmVolunteerThree.jsp" location="2325,465" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminChangeStatus.jsp" location="1050,915" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/admin/adminCalendar.jsp" location="1050,990" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/dean/deanCalendar.jsp" location="2325,540" dimension="151,61" />
+  <StrutsActivity path="/WEB-INF/student/studentCalendar.jsp" location="1680,615" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/teacher/teacherCalendar.jsp" location="435,615" dimension="150,61" />
+  <StrutsActivity path="/WEB-INF/student/studentViewTeacher.jsp" location="650,1150" dimension="278,51" />
+  <StrutsActivity path="/uploadFile.do" location="2055,315" dimension="121,61" />
+  <StrutsTransition id="studentViewTeacher;6,null,/WEB-INF/student/studentViewTeacher.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="339,1175" />
+      <AbsolutePoint location="650,1175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherError;6,null,/WEB-INF/teacher/teacherError.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,495" />
+      <AbsolutePoint location="585,495" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentError;6,null,/WEB-INF/student/studentError.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,570" />
+      <AbsolutePoint location="1831,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentViewScore;6,null,/WEB-INF/student/studentViewScore.jsp,1" routingType="1">
+    <Bendpoints>
+      <Point rDim1="-105,0" rDim2="90,0" />
+    </Bendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherUploadQuestion;6,null,/WEB-INF/teacher/teacherUploadQuestion.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,45" />
+      <AbsolutePoint location="586,45" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentUploadFile;6,null,/WEB-INF/student/studentUploadFile.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,345" />
+      <AbsolutePoint location="1830,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminUploadTeacher;6,null,/WEB-INF/admin/adminUploadTeacher.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,720" />
+      <AbsolutePoint location="1200,720" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanConfirmVolunteer;6,null,/WEB-INF/dean/deanConfirmVolunteer.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,195" />
+      <AbsolutePoint location="2475,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminUploadMajor;6,null,/WEB-INF/admin/adminUploadMajor.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,870" />
+      <AbsolutePoint location="1200,870" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminChangeStatus;6,null,/WEB-INF/admin/adminChangeStatus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,945" />
+      <AbsolutePoint location="1200,945" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanAssessGroup;6,null,/WEB-INF/dean/deanAssessGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,45" />
+      <AbsolutePoint location="2475,45" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherInputMutualAssess;6,null,/WEB-INF/teacher/teacherInputMutualAssess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,270" />
+      <AbsolutePoint location="586,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanCalendar;6,null,/WEB-INF/dean/deanCalendar.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,570" />
+      <AbsolutePoint location="2476,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherOk;6,null,/WEB-INF/teacher/teacherOk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,420" />
+      <AbsolutePoint location="585,420" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherInputReplyAssess;6,null,/WEB-INF/teacher/teacherInputReplyAssess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,345" />
+      <AbsolutePoint location="586,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentMain;6,null,/WEB-INF/student/studentMain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,45" />
+      <AbsolutePoint location="151,45" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanError;6,null,/WEB-INF/dean/deanError.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,420" />
+      <AbsolutePoint location="2476,420" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherMain;6,null,/WEB-INF/teacher/teacherMain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,120" />
+      <AbsolutePoint location="151,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminResetPwd;6,null,/WEB-INF/admin/adminResetPwd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,420" />
+      <AbsolutePoint location="1200,420" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherDownloadFile;6,null,/WEB-INF/teacher/teacherDownloadFile.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,570" />
+      <AbsolutePoint location="585,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanCheckQuestion;6,null,/WEB-INF/dean/deanCheckQuestion.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,120" />
+      <AbsolutePoint location="2475,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="login;6,null,/WEB-INF/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,345" />
+      <AbsolutePoint location="151,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminBulkChanges;6,null,/WEB-INF/admin/adminBulkChanges.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,120" />
+      <AbsolutePoint location="1200,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentChangePwd;6,null,/WEB-INF/student/studentChangePwd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,45" />
+      <AbsolutePoint location="1830,45" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminCalendar;6,null,/WEB-INF/admin/adminCalendar.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,1020" />
+      <AbsolutePoint location="1200,1020" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanReplyGroup;6,null,/WEB-INF/dean/deanReplyGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,345" />
+      <AbsolutePoint location="2475,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminMain;6,null,/WEB-INF/admin/adminMain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,270" />
+      <AbsolutePoint location="151,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminUploadStudent;6,null,/WEB-INF/admin/adminUploadStudent.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,795" />
+      <AbsolutePoint location="1200,795" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminQueryStudent;6,null,/WEB-INF/admin/adminQueryStudent.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,270" />
+      <AbsolutePoint location="1200,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminStatistics;6,null,/WEB-INF/admin/adminStatistics.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,495" />
+      <AbsolutePoint location="1200,495" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentCalendar;6,null,/WEB-INF/student/studentCalendar.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,645" />
+      <AbsolutePoint location="1830,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanOk;6,null,/WEB-INF/dean/deanOk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,270" />
+      <AbsolutePoint location="2475,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminUploadDept;6,null,/WEB-INF/admin/adminUploadDept.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,645" />
+      <AbsolutePoint location="1200,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherChangePwd;6,null,/WEB-INF/teacher/teacherChangePwd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,120" />
+      <AbsolutePoint location="585,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentViewQuestion;6,null,/WEB-INF/student/studentViewQuestion.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,420" />
+      <AbsolutePoint location="1830,420" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherCalendar;6,null,/WEB-INF/teacher/teacherCalendar.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,645" />
+      <AbsolutePoint location="585,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminOk;6,null,/WEB-INF/admin/adminOk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,195" />
+      <AbsolutePoint location="1200,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teacherInputFirstAssess;6,null,/WEB-INF/teacher/teacherInputFirstAssess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,195" />
+      <AbsolutePoint location="585,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanConfirmVolunteerThree;6,null,/WEB-INF/dean/deanConfirmVolunteerThree.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2520,495" />
+      <AbsolutePoint location="2476,495" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminError;6,null,/WEB-INF/admin/adminError.jsp,1" routingType="1">
+    <Bendpoints>
+      <Point rDim1="-105,0" rDim2="90,0" />
+    </Bendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentSelectTwo;6,null,/WEB-INF/student/studentSelectTwo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,270" />
+      <AbsolutePoint location="1830,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentSelectOne;6,null,/WEB-INF/student/studentSelectOne.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,195" />
+      <AbsolutePoint location="1830,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminQueryTeacher;6,null,/WEB-INF/admin/adminQueryTeacher.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,345" />
+      <AbsolutePoint location="1200,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="studentOk;6,null,/WEB-INF/student/studentOk.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1875,120" />
+      <AbsolutePoint location="1830,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="deanMain;6,null,/WEB-INF/dean/deanMain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="210,195" />
+      <AbsolutePoint location="151,195" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="adminUploadClazz;6,null,/WEB-INF/admin/adminUploadClazz.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1245,570" />
+      <AbsolutePoint location="1200,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

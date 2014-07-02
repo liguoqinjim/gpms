@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	>
+	<!--启用注解扫描  -->
+	<!-- <context:annotation-config/> -->
+	<!-- 启用注解扫描 -->
+	<context:annotation-config />
+	
+	<!-- <bean id="testService" class="com.li.domain.TestService"> <property 
+		name="name" value="test" /> </bean> -->
+
+	<!--配置数据源 -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> <property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> <property name="url" value="jdbc:mysql://localhost:3306/myssh1" /> <property 
+		name="username" value="root" /> <property name="password" value=""></property> 
+		连接池启动时的初始值 <property name="initialSize" value="3" /> 连接池最大值 <property name="maxActive" 
+		value="500" /> 最大空闲值 <property name="maxIdle" value="2" /> 最小空闲值 <property 
+		name="minIdle" value="1" /> </bean> -->
+
+	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource"></property> <property name="mappingResources"> 
+		<list> <value>com/li/domain/Employee.hbm.xml</value> </list> </property> 
+		<property name="hibernateProperties"> <value> hibernate.dialect=org.hibernate.dialect.MySQLDialect 
+		hibernate.show_sql=true </value> </property> </bean> -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/gpms_2014">
+		</property>
+		<property name="username" value="root"></property>
+		<!-- <property name="password" value=""></property> -->
+		<property name="password" value=""></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/li/domain/Teacher.hbm.xml</value>
+				<value>com/li/domain/ScoreProportion.hbm.xml</value>
+				<value>com/li/domain/Dept.hbm.xml</value>
+				<value>com/li/domain/AttachmentType.hbm.xml</value>
+				<value>com/li/domain/TeacherGroup.hbm.xml</value>
+				<value>com/li/domain/SubjectType.hbm.xml</value>
+				<value>com/li/domain/SystemStatus.hbm.xml</value>
+				<value>com/li/domain/Major.hbm.xml</value>
+				<value>com/li/domain/Clazz.hbm.xml</value>
+				<value>com/li/domain/Subject.hbm.xml</value>
+				<value>com/li/domain/Comment.hbm.xml</value>
+				<value>com/li/domain/Student.hbm.xml</value>
+				<value>com/li/domain/Volunteer.hbm.xml</value>
+				<value>com/li/domain/Notice.hbm.xml</value>
+				<value>com/li/domain/Attachment.hbm.xml</value> </list>
+		</property></bean>
+	<!--事物管理器  -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!--启用事物注解  -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	
+	<bean id="attachmentServiceInter" class="com.li.service.imp.AttachmentService" />
+	<bean id="attachmentTypeServiceInter" class="com.li.service.imp.AttachmentTypeService" />
+	<bean id="clazzServiceInter" class="com.li.service.imp.ClazzService"  />
+	<bean id="commentServiceInter" class="com.li.service.imp.CommentService"  />
+	<bean id="deptServiceInter" class="com.li.service.imp.DeptService"  />
+	<bean id="majorServiceInter" class="com.li.service.imp.MajorService" />
+	<bean id="noticeServiceInter" class="com.li.service.imp.NoticeService" />
+	<bean id="scoreProportionServiceInter" class="com.li.service.imp.ScoreProportionService" />
+	<bean id="studentServiceInter" class="com.li.service.imp.StudentService"  />
+	<bean id="subjectServiceInter" class="com.li.service.imp.SubjectService" />
+	<bean id="subjectTypeServiceInter" class="com.li.service.imp.SubjectTypeService"  />
+	<bean id="systemStatusServiceInter" class="com.li.service.imp.SystemStatusService" />
+	<bean id="teacherServiceInter" class="com.li.service.imp.TeacherService" />
+	<bean id="teacherGroupServiceInter" class="com.li.service.imp.TeacherGroupService" />
+	<bean id="volunteerServiceInter" class="com.li.service.imp.VolunteerService" />
+	
+	<!-- <bean id="attachmentService" class="com.li.service.imp.AttachmentService"/>
+	<bean id="attachmentTypeService" class="com.li.service.imp.AttachmentTypeService"/>
+	<bean id="clazzService" class="com.li.service.imp.ClazzService"/>
+	<bean id="commentService" class="com.li.service.imp.CommentService"/>
+	<bean id="deptService" class="com.li.service.imp.DeptService"/>
+	<bean id="majorService" class="com.li.service.imp.MajorService"/>
+	<bean id="noticeService" class="com.li.service.imp.NoticeService"/>
+	<bean id="scoreProportionService" class="com.li.service.imp.ScoreProportionService"/>
+	<bean id="studentService" class="com.li.service.imp.StudentService"/>
+	<bean id="subjectService" class="com.li.service.imp.SubjectService"/>
+	<bean id="subjectTypeService" class="com.li.service.imp.SubjectTypeService"/>
+	<bean id="systemStatusService" class="com.li.service.imp.SystemStatusService"/>
+	<bean id="teacherService" class="com.li.service.imp.TeacherService"/>
+	<bean id="teacherGroupService" class="com.li.service.imp.TeacherGroupService"/>
+	<bean id="volunteerService" class="com.li.service.imp.VolunteerService"/> -->
+	
+	<!-- 
+	<bean id="attachmentServiceInter" class="com.li.service.imp.AttachmentService" name="attachmentServiceInter"/>
+	<bean id="attachmentTypeServiceInter" class="com.li.service.imp.AttachmentTypeService" name="attachmentTypeServiceInter"/>
+	<bean id="clazzServiceInter" class="com.li.service.imp.ClazzService" name="clazzServiceInter"/>
+	<bean id="commentServiceInter" class="com.li.service.imp.CommentService" name="commentServiceInter"/>
+	<bean id="deptServiceInter" class="com.li.service.imp.DeptService" name="deptServiceInter"/>
+	<bean id="majorServiceInter" class="com.li.service.imp.MajorService" name="majorServiceInter"/>
+	<bean id="noticeServiceInter" class="com.li.service.imp.NoticeService" name="noticeServiceInter"/>
+	<bean id="scoreProportionServiceInter" class="com.li.service.imp.ScoreProportionService" name="scoreProportionServiceInter"/>
+	<bean id="studentServiceInter" class="com.li.service.imp.StudentService"  name="studentServiceInter"/>
+	<bean id="subjectServiceInter" class="com.li.service.imp.SubjectService" name="subjectServiceInter"/>
+	<bean id="subjectTypeServiceInter" class="com.li.service.imp.SubjectTypeService"  name="subjectTypeServiceInter"/>
+	<bean id="systemStatusServiceInter" class="com.li.service.imp.SystemStatusService" name="systemStatusServiceInter"/>
+	<bean id="teacherServiceInter" class="com.li.service.imp.TeacherService" name="teacherServiceInter"/>
+	<bean id="teacherGroupServiceInter" class="com.li.service.imp.TeacherGroupService" name="teacherGroupServiceInter"/>
+	<bean id="volunteerServiceInter" class="com.li.service.imp.VolunteerService" name="volunteerServiceInter"/> -->
+	
+	
+	<!-- <bean id="employeeService" class="com.li.service.imp.EmployeeService">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> -->
+	
+	
+	
+	<!--配置Action  -->
+	<bean name="/login" class="com.li.struts.action.LoginAction" />
+	<bean name="/teacherUrl" class="com.li.struts.action.TeacherUrlAction" />
+	<bean name="/adminUrl" class="com.li.struts.action.AdminUrlAction"/>
+	<bean name="/studentUrl" class="com.li.struts.action.StudentUrlAction"/>
+	<bean name="/deanUrl" class="com.li.struts.action.DeanUrlAction"/>
+	<bean name="/adminUpload" class="com.li.struts.action.AdminUploadAction">
+		<property name="teacherServiceInter" ref="teacherServiceInter"></property>
+		<property name="studentServiceInter" ref="studentServiceInter"></property>
+		<property name="clazzServiceInter" ref="clazzServiceInter"></property>
+		<property name="majorServiceInter" ref="majorServiceInter"></property>
+		<property name="deptServiceInter" ref="deptServiceInter"></property>
+	</bean>
+	
+	
+	<!-- student -->
+	<bean name="/changePwd" class="com.li.struts.action.student.ChangePwdAction"/>
+	<bean name="/chooseSubject" class="com.li.struts.action.student.ChooseSubjectAction" />
+	<bean name="/uploadFile" class="com.li.struts.action.student.UploadFileAction"/>
+	
+	<!-- teacher -->
+	<bean name="/uploadQuestion" class="com.li.struts.action.teacher.UploadQuestionAction"/>
+	<bean name="/teacherChangePwd" class="com.li.struts.action.teacher.TeacherChangePwdAction"/>
+	
+	<!-- dean -->
+	<bean name="/accessQuestion" class="com.li.struts.action.dean.AccessQuestionAction"/>
+	<bean name="/notAccessQuestion" class="com.li.struts.action.dean.NotAccessQuestionAction"/>
+	<bean name="/confirmSubject" class="com.li.struts.action.dean.ConfirmSubjectAction"/>
+	<bean name="/accessGroup" class="com.li.struts.action.dean.AccessGroupAction"/>
+	
+	<!-- admin -->
+	<bean name="/uploadClazz" class="com.li.struts.action.admin.UploadClazzAction"/>
+	<bean name="/uploadStudent" class="com.li.struts.action.admin.UploadStudentAction"/>
+	<bean name="/uploadTeacher" class="com.li.struts.action.admin.UploadTeacherAction"/>
+	<bean name="/uploadMajor" class="com.li.struts.action.admin.UploadMajorAction"/>
+	<bean name="/uploadDept" class="com.li.struts.action.admin.UploadDeptAction"/>
+	<bean name="/queryStudent" class="com.li.struts.action.admin.QueryStudentAction"/>
+	<bean name="/changeStatus" class="com.li.struts.action.admin.ChangeStatusAction"/>
+	 
+	
+</beans>

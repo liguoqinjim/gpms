@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="com.li.struts.form.LoginForm" />
+		<!-- <form-bean name="uploadForm" type="com.li.struts.form.UploadForm" 
+			/> -->
+		<form-bean name="uploadQuestionForm"
+			type="com.li.struts.form.teacher.UploadQuestionForm" />
+		<form-bean name="chooseSubjectForm"
+			type="com.li.struts.form.student.ChooseSubjectForm" />
+		<form-bean name="confirmSubjectForm" type="com.li.struts.form.dean.ConfirmSubjectForm" />
+		<form-bean name="changePwdForm" type="com.li.struts.form.student.ChangePwdForm" />
+		<form-bean name="teacherChangePwdForm"
+			type="com.li.struts.form.teacher.TeacherChangePwdForm" />
+		<form-bean name="adminUploadForm" type="com.li.struts.form.AdminUploadForm" />
+		<form-bean name="notAccessQuestionForm"
+			type="com.li.struts.form.dean.NotAccessQuestionForm" />
+		<form-bean name="accessQuestionForm" type="com.li.struts.form.dean.AccessQuestionForm" />
+		<form-bean name="queryStudentForm" type="com.li.struts.form.admin.QueryStudentForm" />
+    <form-bean name="changeStatusForm" type="com.li.struts.form.admin.ChangeStatusForm" />
+    <form-bean name="inputFirstAssessForm" type="com.li.struts.form.teacher.InputFirstAssessForm" />
+    <form-bean name="uploadFileForm" type="com.li.struts.form.student.UploadFileForm" />
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+		<forward name="studentMain" path="/WEB-INF/student/studentMain.jsp" />
+		<forward name="teacherMain" path="/WEB-INF/teacher/teacherMain.jsp" />
+		<forward name="deanMain" path="/WEB-INF/dean/deanMain.jsp" />
+		<forward name="adminMain" path="/WEB-INF/admin/adminMain.jsp" />
+		<forward name="login" path="/WEB-INF/login.jsp" />
+		<forward name="teacherUploadQuestion" path="/WEB-INF/teacher/teacherUploadQuestion.jsp" />
+
+		<forward name="teacherChangePwd" path="/WEB-INF/teacher/teacherChangePwd.jsp" />
+		<forward name="teacherInputFirstAssess" path="/WEB-INF/teacher/teacherInputFirstAssess.jsp" />
+		<forward name="teacherInputMutualAssess" path="/WEB-INF/teacher/teacherInputMutualAssess.jsp" />
+		<forward name="teacherInputReplyAssess" path="/WEB-INF/teacher/teacherInputReplyAssess.jsp" />
+		<forward name="teacherOk" path="/WEB-INF/teacher/teacherOk.jsp" />
+		<forward name="adminUploadMajor" path="/WEB-INF/admin/adminUploadMajor.jsp" />
+		<forward name="adminBulkChanges" path="/WEB-INF/admin/adminBulkChanges.jsp" />
+		<forward name="adminOk" path="/WEB-INF/admin/adminOk.jsp" />
+		<forward name="adminQueryStudent" path="/WEB-INF/admin/adminQueryStudent.jsp" />
+		<forward name="adminQueryTeacher" path="/WEB-INF/admin/adminQueryTeacher.jsp" />
+		<forward name="adminResetPwd" path="/WEB-INF/admin/adminResetPwd.jsp" />
+		<forward name="adminStatistics" path="/WEB-INF/admin/adminStatistics.jsp" />
+		<forward name="adminUploadClazz" path="/WEB-INF/admin/adminUploadClazz.jsp" />
+		<forward name="adminUploadDept" path="/WEB-INF/admin/adminUploadDept.jsp" />
+		<forward name="adminUploadTeacher" path="/WEB-INF/admin/adminUploadTeacher.jsp" />
+		<forward name="adminUploadStudent" path="/WEB-INF/admin/adminUploadStudent.jsp" />
+		<forward name="studentChangePwd" path="/WEB-INF/student/studentChangePwd.jsp" />
+		<forward name="studentOk" path="/WEB-INF/student/studentOk.jsp" />
+		<forward name="studentSelectOne" path="/WEB-INF/student/studentSelectOne.jsp" />
+		<forward name="studentSelectTwo" path="/WEB-INF/student/studentSelectTwo.jsp" />
+		<forward name="studentUploadFile" path="/WEB-INF/student/studentUploadFile.jsp" />
+		<forward name="studentViewQuestion" path="/WEB-INF/student/studentViewQuestion.jsp" />
+		<forward name="studentViewScore" path="/WEB-INF/student/studentViewScore.jsp" />
+		<forward name="deanAssessGroup" path="/WEB-INF/dean/deanAssessGroup.jsp" />
+		<forward name="deanCheckQuestion" path="/WEB-INF/dean/deanCheckQuestion.jsp" />
+		<forward name="deanConfirmVolunteer" path="/WEB-INF/dean/deanConfirmVolunteer.jsp" />
+		<forward name="deanOk" path="/WEB-INF/dean/deanOk.jsp" />
+		<forward name="deanReplyGroup" path="/WEB-INF/dean/deanReplyGroup.jsp" />
+
+		<forward name="teacherError" path="/WEB-INF/teacher/teacherError.jsp" />
+		<forward name="adminError" path="/WEB-INF/admin/adminError.jsp" />
+		<forward name="studentError" path="/WEB-INF/student/studentError.jsp" />
+		<forward name="deanError" path="/WEB-INF/dean/deanError.jsp" />
+		<forward name="teacherDownloadFile" path="/WEB-INF/teacher/teacherDownloadFile.jsp" />
+		<forward name="deanConfirmVolunteerThree" path="/WEB-INF/dean/deanConfirmVolunteerThree.jsp" />
+		<forward name="adminChangeStatus" path="/WEB-INF/admin/adminChangeStatus.jsp" />
+		<forward name="adminCalendar" path="/WEB-INF/admin/adminCalendar.jsp" />
+		<forward name="deanCalendar" path="/WEB-INF/dean/deanCalendar.jsp" />
+		<forward name="studentCalendar" path="/WEB-INF/student/studentCalendar.jsp" />
+		<forward name="teacherCalendar" path="/WEB-INF/teacher/teacherCalendar.jsp" />
+		<forward name="studentViewTeacher" path="/WEB-INF/student/studentViewTeacher.jsp" />
+
+
+
+	</global-forwards>
+	<action-mappings>
+		<action attribute="loginForm" name="loginForm" path="/login"
+			scope="request" type="com.li.struts.action.LoginAction" validate="false"
+			cancellable="true" />
+		<action attribute="uploadQuestionForm" name="uploadQuestionForm"
+			path="/uploadQuestion" scope="request"
+			type="com.li.struts.action.teacher.UploadQuestionAction" validate="false"
+			cancellable="true" />
+		<action parameter="flag" path="/teacherUrl" scope="request"
+			type="com.li.struts.action.TeacherUrlAction" validate="false"
+			cancellable="true" />
+		<action parameter="flag" path="/adminUrl" scope="request"
+			type="com.li.struts.action.AdminUrlAction" validate="false"
+			cancellable="true" />
+		<action parameter="flag" path="/studentUrl" scope="request"
+			type="com.li.struts.action.StudentUrlAction" validate="false"
+			cancellable="true" />
+		<action parameter="flag" path="/deanUrl" scope="request"
+			type="com.li.struts.action.DeanUrlAction" validate="false"
+			cancellable="true" />
+
+		<action attribute="accessQuestionForm" name="accessQuestionForm"
+			path="/accessQuestion" scope="request"
+			type="com.li.struts.action.dean.AccessQuestionAction" validate="false"
+			cancellable="true" />
+		<action attribute="notAccessQuestionForm" name="notAccessQuestionForm"
+			path="/notAccessQuestion" scope="request"
+			type="com.li.struts.action.dean.NotAccessQuestionAction" validate="false"
+			cancellable="true" />
+		<action attribute="chooseSubjectForm" name="chooseSubjectForm"
+			path="/chooseSubject" scope="request"
+			type="com.li.struts.action.student.ChooseSubjectAction" validate="false"
+			cancellable="true" />
+		<action attribute="confirmSubjectForm" name="confirmSubjectForm"
+			path="/confirmSubject" scope="request"
+			type="com.li.struts.action.dean.ConfirmSubjectAction" validate="false"
+			cancellable="true" />
+
+		<action attribute="changePwdForm" name="changePwdForm" path="/changePwd"
+			scope="request" type="com.li.struts.action.student.ChangePwdAction"
+			validate="false" cancellable="true" />
+		<action attribute="teacherChangePwdForm" name="teacherChangePwdForm"
+			path="/teacherChangePwd" scope="request"
+			type="com.li.struts.action.teacher.TeacherChangePwdAction" validate="false"
+			cancellable="true" />
+		<action attribute="adminUploadForm" name="adminUploadForm"
+			parameter="flag" path="/adminUpload" type="com.li.struts.action.AdminUploadAction"
+			validate="false" cancellable="true" />
+		<action path="/uploadClazz" type="com.li.struts.action.admin.UploadClazzAction"
+			validate="false" cancellable="true" />
+		<action path="/uploadDept" type="com.li.struts.action.admin.UploadDeptAction"
+			validate="false" cancellable="true" />
+		<action path="/uploadTeacher" type="com.li.struts.action.admin.UploadTeacherAction"
+			cancellable="true" />
+		<action path="/uploadStudent" type="com.li.struts.action.admin.UploadStudentAction"
+			validate="false" cancellable="true" />
+		<action path="/uploadMajor" type="com.li.struts.action.admin.UploadMajorAction"
+			validate="false" cancellable="true" />
+		<action attribute="queryStudentForm" name="queryStudentForm"
+			path="/queryStudent" scope="request"
+			type="com.li.struts.action.admin.QueryStudentAction" validate="false"
+			cancellable="true" />
+		<action path="/accessGroup" type="com.li.struts.action.dean.AccessGroupAction"
+			validate="false" cancellable="true" />
+		<action
+      attribute="changeStatusForm"
+      name="changeStatusForm"
+      path="/changeStatus"
+      scope="request"
+      type="com.li.struts.action.admin.ChangeStatusAction"
+      validate="false"
+      cancellable="true" />
+    <action
+      attribute="inputFirstAssessForm"
+      name="inputFirstAssessForm"
+      path="/inputFirstAssess"
+      scope="request"
+      type="com.li.struts.action.teacher.InputFirstAssessAction"
+      validate="false"
+      cancellable="true" />
+    <action
+      attribute="uploadFileForm"
+      name="uploadFileForm"
+      path="/uploadFile"
+      scope="request"
+      type="com.li.struts.action.student.UploadFileAction"
+      validate="false"
+      cancellable="true" />
+    
+
+
+
+
+
+
+
+
+	</action-mappings>
+	<controller>
+		value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+	<message-resources parameter="com.li.struts.ApplicationResources" />
+</struts-config>
+

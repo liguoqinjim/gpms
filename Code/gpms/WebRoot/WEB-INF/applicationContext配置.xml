@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	>
+	<!-- 启用注解扫描 -->
+	<context:annotation-config/>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<!-- <property name="url" value="jdbc:mysql://localhost:3306/gpms_2014"> -->
+		<property name="url" value="jdbc:mysql://rdsqevabvumjfeq.mysql.rds.aliyuncs.com:3306/gpms_2014">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+		<property name="initialSize" value="30"/>
+	 	<!-- 连接池的最大值 -->
+	 	<property name="maxActive" value="500"/> 
+ 		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+		<property name="maxIdle" value="2"/>
+		<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+		<property name="minIdle" value="1"/>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/li/domain/Teacher.hbm.xml</value>
+				<value>com/li/domain/ScoreProportion.hbm.xml</value>
+				<value>com/li/domain/Dept.hbm.xml</value>
+				<value>com/li/domain/AttachmentType.hbm.xml</value>
+				<value>com/li/domain/TeacherGroup.hbm.xml</value>
+				<value>com/li/domain/SubjectType.hbm.xml</value>
+				<value>com/li/domain/SystemStatus.hbm.xml</value>
+				<value>com/li/domain/Major.hbm.xml</value>
+				<value>com/li/domain/Clazz.hbm.xml</value>
+				<value>com/li/domain/Subject.hbm.xml</value>
+				<value>com/li/domain/Comment.hbm.xml</value>
+				<value>com/li/domain/Student.hbm.xml</value>
+				<value>com/li/domain/Volunteer.hbm.xml</value>
+				<value>com/li/domain/Notice.hbm.xml</value>
+				<value>com/li/domain/Attachment.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- <bean id="basicService" class="com.li.basic.BasicService">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean> -->
+	
+	<bean id="attachmentService" class="com.li.service.imp.AttachmentService"/>
+	<bean id="attachmentTypeService" class="com.li.service.imp.AttachmentTypeService"/>
+	<bean id="clazzService" class="com.li.service.imp.ClazzService"/>
+	<bean id="commentService" class="com.li.service.imp.CommentService"/>
+	<bean id="deptService" class="com.li.service.imp.DeptService"/>
+	<bean id="majorService" class="com.li.service.imp.MajorService"/>
+	<bean id="noticeService" class="com.li.service.imp.NoticeService"/>
+	<bean id="scoreProportionService" class="com.li.service.imp.ScoreProportionService"/>
+	<bean id="studentService" class="com.li.service.imp.StudentService"/>
+	<bean id="subjectService" class="com.li.service.imp.SubjectService"/>
+	<bean id="subjectTypeService" class="com.li.service.imp.SubjectService"></bean>
+	<bean id="systemStatusService" class="com.li.service.imp.SystemStatusService"/>
+	<bean id="teacherService" class="com.li.service.imp.TeacherService"/>
+	<bean id="teacherGroupService" class="com.li.service.imp.TeacherGroupService"/>
+	<bean id="volunteerService" class="com.li.service.imp.VolunteerService"/>
+	
+</beans>
